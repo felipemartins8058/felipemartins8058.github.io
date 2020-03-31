@@ -83,6 +83,9 @@ h1{font-size: 28px;} h1{font-size:26px ;} h1{font-size: 24px;} h1{font-size: 22p
     width: 100%;
     object-fit: contain;
 }
+.navbar-brand img{
+    max-height: 40px;
+}
 
 /* Paddings and Margins */
 .py-6, .pt-6{

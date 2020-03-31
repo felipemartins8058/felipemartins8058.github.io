@@ -7,6 +7,7 @@
     <title>Codi Jr</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -45,7 +46,9 @@
 
     <nav id="menutop" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Container Digital Jr</a>
+            <a class="navbar-brand" href="#">
+                <img src="images/logo_cor_hr.png" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,23 +87,35 @@
         <div class="relative container py-5" data-aos="fade-up">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="img-contain">
+                    <!-- <div class="img-contain">
                         <img src="images/CodiJr.jpg" alt="Imagem">
+                    </div> -->
+                    <!-- Carousel -->
+                    <div class="relative">
+                        <div id="slider" class="owl-carousel owl-theme">
+                            <div id="banner1" class="item"><img src="images/CodiJr.jpg" alt="Banner Teste">
+                            </div>
+                            <div id="banner2" class="item"><img src="images//MockUp.png" alt="Banner Teste">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6 my-auto">
-                   <div class="p-4">
-                    <h2 class="relative text-title font-weight-black text-rosa">
-                        <span class="relative hightlight">Quem somos?</span>
-                    </h2>
-                    <p>A Container Digital Júnior é a Empresa Júnior do Curso de Sistemas e Mídias Digitais da UFC, foi
-                        fundada em no ano de 2014 com o objetivo de ser uma empresa jovem que alia design, tecnologia e
-                        criatividade. No ano de 2018 uniu-se à Federação das Empresas Juniores do Estado do Ceará
-                        (FEJECE)
-                        para gerar impacto em rede,sempre trabalhando com um time de profissionais que visa transformar
-                        a
-                        realidade dos nossos clientes com serviços de excelência.</p>
-                   </div>
+                    <div class="p-4">
+                        <h2 class="relative text-title font-weight-black text-rosa">
+                            <span class="relative hightlight">Quem somos?</span>
+                        </h2>
+                        <p>A Container Digital Júnior é a Empresa Júnior do Curso de Sistemas e Mídias Digitais da UFC,
+                            foi
+                            fundada em no ano de 2014 com o objetivo de ser uma empresa jovem que alia design,
+                            tecnologia e
+                            criatividade. No ano de 2018 uniu-se à Federação das Empresas Juniores do Estado do Ceará
+                            (FEJECE)
+                            para gerar impacto em rede,sempre trabalhando com um time de profissionais que visa
+                            transformar
+                            a
+                            realidade dos nossos clientes com serviços de excelência.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,10 +138,11 @@
                     <div class="row mb-4">
                         <div class="col-sm">
                             <div class="p-4">
-                                <div class="icon-g text-aux">
+                                <div class="icon-g text-azul">
                                     <ion-icon name="brush-outline"></ion-icon>
                                 </div>
-                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle">Design Gráfico</h6>
+                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle text-azul">Design Gráfico
+                                </h6>
                                 <ul class="list-unstyled">
                                     <li class="text-aux">Identidade Visual</li>
                                     <li class="text-aux">Aplicações de marca</li>
@@ -137,10 +153,11 @@
                         </div>
                         <div class="col-sm">
                             <div class="p-4">
-                                <div class="icon-g text-aux">
+                                <div class="icon-g text-azul">
                                     <ion-icon name="camera-outline"></ion-icon>
                                 </div>
-                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle">Audiovisual</h6>
+                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle text-azul">Audiovisual
+                                </h6>
                                 <ul class="list-unstyled">
                                     <li class="text-aux">Vinheta</li>
                                     <li class="text-aux">Cobertura de Eventos</li>
@@ -153,10 +170,11 @@
                     <div class="row">
                         <div class="col-sm">
                             <div class="p-4">
-                                <div class="icon-g text-aux">
+                                <div class="icon-g text-azul">
                                     <ion-icon name="desktop-outline"></ion-icon>
                                 </div>
-                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle">Web Design</h6>
+                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle text-azul">Web Design
+                                </h6>
                                 <ul class="list-unstyled">
                                     <li class="text-aux">Sites</li>
                                     <li class="text-aux">Landing Pages</li>
@@ -167,10 +185,10 @@
                         </div>
                         <div class="col-sm">
                             <div class="p-4">
-                                <div class="icon-g text-aux">
+                                <div class="icon-g text-azul">
                                     <ion-icon name="layers-outline"></ion-icon>
                                 </div>
-                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle">UX/UI</h6>
+                                <h6 class="py-2 text-uppercase font-weight-black text-subtitle text-azul">UX/UI</h6>
                                 <ul class="list-unstyled">
                                     <li class="text-aux">Prototipação Web</li>
                                     <li class="text-aux">Prototipação Mobile</li>
@@ -303,8 +321,12 @@
                         <p class="text-white">Instituto UFC virtual, Bloco 1430 <br>Sala 07 térreo - UFC Campus do Pici
                         </p>
                         <p class="text-white">containerdigitaljr@gmail.com</p>
-                        <p class="text-white">WhatsApp: (85) 99165-4774</p>
                         <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="text-white" href="https://whatsfacil.com/b87d7e">
+                                    <ion-icon name="logo-whatsapp"></ion-icon>
+                                </a>
+                            </li>
                             <li class="list-inline-item text-white">
                                 <ion-icon name="logo-facebook"></ion-icon>
                             </li>
@@ -365,7 +387,8 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popover.js"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
@@ -388,6 +411,26 @@
             duration: 1200,
             offset: 250
         });
+    </script>
+
+    <!-- Script Carousel -->
+    <script type="text/javascript" async>
+        const owl = $('#slider');
+        owl.owlCarousel({
+            items: 1,
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            dots: false
+        });
+        /*$('.triggerNext').on("click", function () {
+            owl.trigger('next.owl.carousel');
+        });
+        $('.triggerPrev').on("click", function () {
+            owl.trigger('prev.owl.carousel');
+        })*/
     </script>
 </body>
 
