@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:300,300i,400,400i,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Exo:300,400,700,900&display=swap');
 
 :root{
     --rosa: #f0515f;
@@ -6,6 +6,7 @@
     --verde: #d0dd29;
     --preto: #1a1a1a;
     --cinza: #999999;
+    --branco: #fff;
 }
 
 /* Geral */
@@ -15,12 +16,16 @@
 .relative{
     position: relative;
 }
+.absolute{
+    position: absolute;
+}
+.card-shadow{
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.19), 6px 6px 6px rgba(0,0,0,0.23);
+}
 
 /* Font Styles */
-h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a;}
-.seconda
+h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 
-h1{font-size: 28px;} h1{font-size:26px ;} h1{font-size: 24px;} h1{font-size: 22px;} h1{font-size: 20px;} h1{font-size: 18px;}
 .text-rosa{
     color: var(--rosa);
 }
@@ -33,14 +38,17 @@ h1{font-size: 28px;} h1{font-size:26px ;} h1{font-size: 24px;} h1{font-size: 22p
 .text-aux{
     color: var(--cinza)
 }
+.text-branco{
+    color: var(--branco);
+}
 .font-weight-black{
     font-weight: 900;
 }
 .text-title{
-      font-size: 3rem;
+      font-size: 2.618em;
 }
 .text-subtitle{
-      font-size: 1.5rem;
+      font-size: 1.618em ;
 }
 .hightlight::after{
     content: "";
@@ -127,17 +135,26 @@ h1{font-size: 28px;} h1{font-size:26px ;} h1{font-size: 24px;} h1{font-size: 22p
 
 /* Portfolio Effect */
 .list-category li{
-    margin: 1rem 20px;
+    position: relative;
     text-transform: uppercase;
     font-weight: 900;
     cursor: pointer;
     transition: all .2s ease-in-out;
+    text-align: center;
 }
-li.filter-active{
-    padding: 0 10px;
-    margin: 1rem 0;
-    background: var(--verde);
-    transition: all .2s ease-in-out;
+.list-category li::before{
+    content: '';
+    position: absolute;
+    bottom: 0;left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--azul);
+    transition: width .2s;
+}
+.list-category .filter-active::before{
+    content: '';
+    width: 100%;
+    transition: width .2s;
 }
 .portfolio-div{
     transition: all 350ms ease;
@@ -186,6 +203,35 @@ li.filter-active{
     transform: translateY(0);
     opacity: 1;
     transition: all .3s ease-in-out .3s;
+}
+
+/* Patterns & Shapes Style */
+.border-text{
+    border: solid 2px var(--azul);
+}
+.white-circle::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}
+.green-circle::after{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: -8px;
+    background: var(--verde);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.float-pattern{
+    position: absolute;
+    right: 0;
 }
 
 /* Menu Overlay Mobile */
