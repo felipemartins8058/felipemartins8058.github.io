@@ -326,6 +326,18 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
     position: absolute;
     right: 0;
 }
+.outline-text-shape{
+    color: transparent;
+    -webkit-text-stroke: 1px var(--rosa);
+}
+.line-shape-bottom::before{
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    height: 2px;
+    background: var(--azul);
+}
 
 /* Menu Overlay Mobile */
 #menu-overlay{
@@ -354,4 +366,10 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 #menu-overlay ul li a{
     font-size: 3rem;
     color: #fff;
+}
+
+/* Bootstrap */
+
+.card{
+    border-radius: 1.875rem;
 }
