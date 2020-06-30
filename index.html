@@ -91,7 +91,7 @@
       <!-- Hero -->
       <div class="relative">
         <div class="img-contain">
-          <embed src="images/hero-home.svg" type="" />
+          <embed src="images/hero.svg" type="" />
         </div>
         <div class="container full-absolute d-flex">
           <div class="relative my-auto">
@@ -120,7 +120,7 @@
       <!-- Sobre -->
       <div id="sobre" class="relative container py-5" data-aos="fade-up">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-md-6">
             <div class="img-contain">
               <img
                 src="images/foto-quem-somos.png"
@@ -128,7 +128,7 @@
               />
             </div>
           </div>
-          <div class="col-sm-6 my-auto">
+          <div class="col-md-6 my-auto">
             <div class="p-4">
               <h2
                 class="relative text-title font-weight-black text-rosa text-uppercase mb-5"
@@ -302,14 +302,14 @@
                 data-filter=".filter-audiovisual, .filter-webdesign, .filter-designgrafico, .filter-uxui"
                 class="filter-active"
               >
-                Todos
+                <span>Todos</span>
               </li>
-              <li data-filter=".filter-audiovisual" class="">Audiovisual</li>
-              <li data-filter=".filter-webdesign" class="">Web design</li>
+              <li data-filter=".filter-audiovisual" class=""><span>Audiovisual</span></li>
+              <li data-filter=".filter-webdesign" class=""><span>Web design</span></li>
               <li data-filter=".filter-designgrafico" class="">
-                Design Gráfico
+                <span>Design Gráfico</span>
               </li>
-              <li data-filter=".filter-uxui" class="">UX/UI</li>
+              <li data-filter=".filter-uxui" class=""><span>UX/UI</span></li>
             </ul>
           </div>
         </div>
@@ -522,7 +522,7 @@
     <!-- AOS -->
     <script>
       AOS.init({
-        duration: 1200,
+        duration: 1,
         offset: 250,
         once: true,
       });
@@ -532,13 +532,29 @@
     <script type="text/javascript" async>
       const owl2 = $("#services-slider");
       owl2.owlCarousel({
-        items: 4,
         loop: true,
         margin: 0,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 10000,
         autoplayHoverPause: true,
         dots: false,
+        responsive: {
+          0:{
+            items: 1,
+            autoplayTimeout: 2000,
+          },
+          768:{
+            items: 2,
+            autoplayTimeout: 2000,
+          },
+          992:{
+            items: 2,
+            autoplayTimeout: 2000,
+          },
+          1200:{
+            items: 4
+          },
+        }
       });
       $(".triggerNext").on("click", function () {
         owl.trigger("next.owl.carousel");

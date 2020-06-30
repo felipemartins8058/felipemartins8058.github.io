@@ -145,13 +145,17 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 /* Portfolio Effect */
 .list-category li{
     position: relative;
+    padding-bottom: .7rem;
     text-transform: uppercase;
     font-weight: 900;
     cursor: pointer;
     transition: all .2s ease-in-out;
     text-align: center;
 }
-.list-category li::before{
+.list-category li span{
+    position: relative;
+}
+.list-category li span::before{
     content: '';
     position: absolute;
     bottom: 0;left: 0;
@@ -160,7 +164,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
     background: var(--azul);
     transition: width .2s;
 }
-.list-category .filter-active::before{
+.list-category .filter-active span::before{
     content: '';
     width: 100%;
     transition: width .2s;
@@ -305,7 +309,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
     position: relative;
     display: flex;
     min-width: 48px;
-    height: 100px;
+    height: 100%;
 }
 .line-shape span{
     position: relative;
@@ -372,4 +376,11 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 
 .card{
     border-radius: 1.875rem;
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+    .list-group-horizontal{
+        flex-direction: column;
+    }
 }
