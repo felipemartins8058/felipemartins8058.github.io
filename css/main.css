@@ -416,6 +416,12 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 .hide-bp-991{
     display: initial;
 }
+#desktop-hero{
+    display: block;
+}
+#mobile-hero{
+    display: none;
+}
 
 /* Media Queries */
 @media (max-width: 991.89px) {
@@ -425,6 +431,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
     }
 }
 @media (max-width: 767.98px) {
+    /* Responsive classes */
+    #desktop-hero{
+        display: none;
+    }
+    #mobile-hero{
+        display: block;
+    }
     /* Patterns & Shapes Style */
     .float-pattern{
         display: none;
@@ -445,6 +458,9 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
     /* Bootstrap */
     .list-group-horizontal{
         flex-direction: column;
+    }
+    .margin-remove{
+        transform: translateX(16px);
     }
 }
 @media (max-width: 329px){
