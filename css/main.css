@@ -31,6 +31,9 @@ body{
 .card-shadow{
     box-shadow: 10px 10px 20px rgba(0,0,0,0.19), 6px 6px 6px rgba(0,0,0,0.23);
 }
+.btn-rounded{
+    border-radius: 40px;
+}
 
 /* Font Styles */
 h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
@@ -107,6 +110,9 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 }
 .py-6, .pb-6{
     padding-bottom: 6rem;
+}
+.responsive-mb-5{
+    margin-bottom: 0;
 }
 
 /* Grids */
@@ -344,9 +350,36 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
 }
 
 /* Menu Overlay Mobile */
+.menu-active a::before{
+    content: '< ';
+    display: inline-block;
+    color: var(--rosa);
+    font-weight: 700;
+    opacity: 0;
+    transform: translateX(5px);
+    transition: all .2s;
+}
+.menu-active a::after{
+    content: ' >';
+    display: inline-block;
+    color: var(--rosa);
+    font-weight: 700;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all .2s;
+}
+.menu-active:hover a::before, .menu-active:hover a::after{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .2s;
+}
+.menu-active.actived a::before, .menu-active.actived a::after{
+    opacity: 1;
+    transform: translateX(0);
+}
 #menu-overlay{
     position: fixed;
-    top: 66px;bottom: 0;right: 0;left: 0;
+    top: 56px;bottom: 0;right: 0;left: 0;
     display: flex;
     justify-content: center;
     overflow-y: auto;
@@ -378,9 +411,46 @@ h1,h2,h3,h4,h5,h6,p,ul,li{color: #1a1a1a; font-size: 1em;}
     border-radius: 1.875rem;
 }
 
+/* Responsive Classes */
+.hide-bp-991{
+    display: initial;
+}
+
 /* Media Queries */
+@media (max-width: 991.89px) {
+    /* Responsive Classes */
+    .hide-bp-991{
+        display: none;
+    }
+}
+@media (max-width: 767.98px) {
+    /* Patterns & Shapes Style */
+    .float-pattern{
+        display: none;
+    }
+    /* Margin & Padding */
+    .responsive-mb-5{
+        margin-bottom: 3rem;
+    }
+    .mb-5{
+        margin-bottom: 2rem!important;
+    }
+}
 @media (max-width: 575.98px) {
+    /* Portfolio Effect */
+    .portfolio-item img{
+        filter: grayscale(0);
+    }
+    /* Bootstrap */
     .list-group-horizontal{
         flex-direction: column;
     }
+}
+@media (max-width: 329px){
+    /* .text-title{
+        font-size: 1.777em;
+  }
+  .text-subtitle{
+        font-size: 1.333em;
+  } */
 }
